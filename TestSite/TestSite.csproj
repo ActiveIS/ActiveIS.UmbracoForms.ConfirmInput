@@ -550,6 +550,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ActiveIS.UmbracoForms.ConfirmInput\ActiveIS.UmbracoForms.ConfirmInput.csproj">
+      <Project>{930fe50f-f18f-4627-a9e1-5c8649f1796d}</Project>
+      <Name>ActiveIS.UmbracoForms.ConfirmInput</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
