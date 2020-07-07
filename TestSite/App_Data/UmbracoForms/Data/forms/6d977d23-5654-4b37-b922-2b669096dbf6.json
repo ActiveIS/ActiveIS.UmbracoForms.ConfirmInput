@@ -42,19 +42,24 @@
                   "placeholder": null,
                   "cssClass": null,
                   "alias": "email",
-                  "id": "c9204231-7756-4e10-cb50-60870fb4bb73",
-                  "fieldTypeId": "3f92e01b-29e2-4a30-bf33-9df5580ed52c",
+                  "id": "428308cd-c0ee-49c2-ef2a-57aff162cb6e",
+                  "fieldTypeId": "d32fd0d0-d342-4025-8b1d-47977637740d",
                   "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
                   "dataSourceFieldKey": null,
                   "containsSensitiveData": false,
                   "mandatory": false,
-                  "regex": null,
+                  "regex": "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+",
                   "requiredErrorMessage": null,
                   "invalidErrorMessage": null,
-                  "condition": null,
+                  "condition": {
+                    "id": "00000000-0000-0000-0000-000000000000",
+                    "enabled": false,
+                    "actionType": "Show",
+                    "logicType": "All",
+                    "rules": []
+                  },
                   "settings": {
-                    "DefaultValue": "",
-                    "Placeholder": ""
+                    "ValidationErrorMessage": ""
                   },
                   "preValues": []
                 },
@@ -100,31 +105,6 @@
                     "AcceptCopy": "Yes, I give permission to store and process my data"
                   },
                   "preValues": null
-                },
-                {
-                  "caption": "ddd",
-                  "tooltip": null,
-                  "placeholder": null,
-                  "cssClass": null,
-                  "alias": "ddd",
-                  "id": "428308cd-c0ee-49c2-ef2a-57aff162cb6e",
-                  "fieldTypeId": "d32fd0d0-d342-4025-8b1d-47977637740d",
-                  "prevalueSourceId": "00000000-0000-0000-0000-000000000000",
-                  "dataSourceFieldKey": null,
-                  "containsSensitiveData": false,
-                  "mandatory": false,
-                  "regex": null,
-                  "requiredErrorMessage": null,
-                  "invalidErrorMessage": null,
-                  "condition": {
-                    "id": "00000000-0000-0000-0000-000000000000",
-                    "enabled": false,
-                    "actionType": "Show",
-                    "logicType": "All",
-                    "rules": []
-                  },
-                  "settings": {},
-                  "preValues": []
                 }
               ]
             }

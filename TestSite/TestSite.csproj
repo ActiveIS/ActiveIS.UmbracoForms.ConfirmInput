@@ -280,6 +280,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\ActiveIS.UmbracoForms.ConfirmInput\js\validate.confirminput.js" />
     <Content Include="App_Plugins\OsmMaps\assets\css\osmmaps.css" />
     <Content Include="App_Plugins\OsmMaps\assets\leaflet\images\layers-2x.png" />
     <Content Include="App_Plugins\OsmMaps\assets\leaflet\images\layers.png" />

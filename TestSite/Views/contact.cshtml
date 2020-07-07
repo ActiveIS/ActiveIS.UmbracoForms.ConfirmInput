@@ -41,8 +41,8 @@
                 <h2>@Model.ContactFormHeader</h2>
                 @Model.ContactIntro
                 <p class="compat-msg">
-        @Umbraco.RenderMacro("renderUmbracoForm", new {FormGuid=Model.ContactForm.ToString()})
-        </p>
+                    @Umbraco.RenderMacro("renderUmbracoForm", new {FormGuid=Model.ContactForm.ToString(), ExcludeScripts = "0"})
+                </p>
             </div>
 
         </div>
