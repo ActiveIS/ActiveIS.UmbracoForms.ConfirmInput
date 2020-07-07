@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -37,31 +37,21 @@ namespace ActiveIS.UmbracoForms.ConfirmInput.Fields
         {
             var errors = new List<string>();
             var fieldValues = postedValues.ToList();
-            if (fieldValues.Any())
-            {
-                foreach (var fieldValue in fieldValues)
-                {
-                    var initialFieldValues = form.AllFields.FirstOrDefault(x => x.Alias == InitialInputFieldAlias)?.Values;
-                    if (initialFieldValues != null && initialFieldValues.Any())
-                    {
-                        foreach (var initialInputFieldValue in initialFieldValues)
-                        {
-                            if (fieldValue != initialInputFieldValue)
-                            {
-                                errors.Add(ValidationErrorMessage);
-                            }
-                        }
-                    }
-                }
 
+            if (fieldValues.Distinct().Any())
+            {
+                errors.Add(ValidationErrorMessage);
             }
 
-            if (errors.Any())
-            {
-                return errors;
-            }
+            return errors.Any() ? errors : base.ValidateField(form, field, fieldValues, context, formStorage);
+        }
 
-            return base.ValidateField(form, field, fieldValues, context, formStorage);
+        public override IEnumerable<string> RequiredJavascriptFiles(Field field)
+        {
+            var javascriptFiles = base.RequiredJavascriptFiles(field).ToList();
+            javascriptFiles.Add($"{Consts.PluginScriptRoot}/validate.confirminput.js");
+
+            return javascriptFiles;
         }
     }
 }
