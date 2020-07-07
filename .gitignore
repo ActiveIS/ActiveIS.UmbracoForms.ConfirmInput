@@ -372,3 +372,6 @@ healthchecksdb
 
 # Ignore the Models Builder models out of date flag
 **/App_Data/Models/ood.flag
+TestSite/App_Data/umbraco.licensing.log.txt
+
+TestSite/App_Data/Models/
