@@ -38,8 +38,13 @@ namespace ActiveIS.UmbracoForms.ConfirmInput.Fields
             var errors = new List<string>();
             var fieldValues = postedValues.ToList();
 
-            if (fieldValues.Distinct().Any())
+            if (!fieldValues[0].ToString().Equals(fieldValues[1].ToString(), StringComparison.InvariantCultureIgnoreCase))
             {
+                if (string.IsNullOrEmpty(ValidationErrorMessage) || string.IsNullOrWhiteSpace(ValidationErrorMessage))
+                {
+                    ValidationErrorMessage = "The values entered do not match";
+                }
+
                 errors.Add(ValidationErrorMessage);
             }
 
