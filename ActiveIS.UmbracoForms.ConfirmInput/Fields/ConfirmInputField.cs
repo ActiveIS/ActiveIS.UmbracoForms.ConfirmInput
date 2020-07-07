@@ -29,9 +29,6 @@ namespace ActiveIS.UmbracoForms.ConfirmInput.Fields
             return $"{Consts.PluginViewRoot}/Backoffice/ConfirmInput.html";
         }
 
-        [Setting("Initial input field alias", Description = "The alias for the initial field to be compared against", View = "~/App_Plugins/UmbracoForms/Backoffice/Common/SettingTypes/textfield.html")]
-        public string InitialInputFieldAlias { get; set; }
-
         [Setting("Validation error message", Description = "The message shown when validation fails", View = "~/App_Plugins/UmbracoForms/Backoffice/Common/SettingTypes/textfield.html")]
         public string ValidationErrorMessage { get; set; }
 
