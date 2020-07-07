@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -26,7 +26,7 @@ namespace ActiveIS.UmbracoForms.ConfirmInput.Fields
 
         public override string GetDesignView()
         {
-            return "~/App_Plugins/ActiveIS.UmbracoForms.ConfirmInput/Views/Backoffice/ConfirmInput.html";
+            return $"{Consts.PluginViewRoot}/Backoffice/ConfirmInput.html";
         }
 
         [Setting("Initial input field alias", Description = "The alias for the initial field to be compared against", View = "~/App_Plugins/UmbracoForms/Backoffice/Common/SettingTypes/textfield.html")]
