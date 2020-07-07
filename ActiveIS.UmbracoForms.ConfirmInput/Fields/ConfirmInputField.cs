@@ -20,7 +20,7 @@ namespace ActiveIS.UmbracoForms.ConfirmInput.Fields
             Icon = "icon-checkbox";
             DataType = FieldDataType.String;
             SortOrder = 10;
-            SupportsRegex = false;
+            SupportsRegex = true;
             FieldTypeViewName = "FieldType.ConfirmInput.cshtml";
         }
 
