@@ -21,6 +21,7 @@ namespace ActiveIS.UmbracoForms.ConfirmInput.Fields
             DataType = FieldDataType.String;
             SortOrder = 10;
             SupportsRegex = false;
+            FieldTypeViewName = "FieldType.ConfirmInput.cshtml";
         }
 
         public override string GetDesignView()
