@@ -25,7 +25,7 @@
        @{if (Model.Validate) { <text> data-val-regex="@Model.InvalidErrorMessage" data-regex="@Html.Raw(Model.Regex)" </text>  }} />
 <label>Confirm @Model.Caption</label>
 <input type="text" name="@Model.Name" id="@confirmId" class="text" value="@values[1]" maxlength="500"
-       @{if (string.IsNullOrEmpty(Model.PlaceholderText) == false) { <text> placeholder="@Model.PlaceholderText" </text> }}
+       @{if (string.IsNullOrEmpty(Model.PlaceholderText) == false) { <text> placeholder="Confirm @Model.PlaceholderText" </text> }}
        data-val="true"
        data-val-validateconfirminput="@invalidMessage"
        @{if (Model.Mandatory) { <text> data-val-required="@Model.RequiredErrorMessage" </text> }}

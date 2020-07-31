@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>ActiveIS.UmbracoForms.ConfirmInput</id>
+    <version>0.0.2-beta</version>
+    <title>ActiveIS.UmbracoForms.ConfirmInput</title>
+    <authors>ActiveIS</authors>
+    <owners>ActiveIS</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/ActiveIS/ActiveIS.UmbracoForms.ConfirmInput</projectUrl>
+    <icon>logo.png</icon>
+    <description>A text input with confirmation field</description>
+    <releaseNotes>Initial Release</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>umbraco umbraco-cms umbraco-forms</tags>
+	<dependencies>
+	  <group targetFramework=".NETFramework4.7.2">
+		  <dependency id="UmbracoForms" version="8.4.1" />
+		  <dependency id="UmbracoForms.Core" version="8.4.1" />
+		  <dependency id="UmbracoCms" version="8.6.1" />
+	  </group>
+    </dependencies>
+  </metadata>
+    <files>
+      <file src="..\logo.png"/>
+	  <file src="..\..\ActiveIS.UmbracoForms.ConfirmInput\bin\Release\ActiveIS.UmbracoForms.ConfirmInput.dll" target="lib\net472" />
+	  <file src="..\..\ActiveIS.UmbracoForms.ConfirmInput\UI\ActiveIS.UmbracoForms.ConfirmInput\**\" target="content\App_Plugins\ActiveIS.UmbracoForms.ConfirmInput\" />
+	  <file src="..\..\ActiveIS.UmbracoForms.ConfirmInput\Views\Partials\Forms\Themes\default\Fieldtypes\**\" target="content\Views\Partials\Forms\Themes\default\Fieldtypes\" />
+    </files>
+</package>

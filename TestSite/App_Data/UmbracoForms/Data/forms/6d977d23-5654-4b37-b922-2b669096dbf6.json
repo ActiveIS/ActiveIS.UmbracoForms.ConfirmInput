@@ -59,7 +59,8 @@
                     "rules": []
                   },
                   "settings": {
-                    "ValidationErrorMessage": ""
+                    "ValidationErrorMessage": "",
+                    "Placeholder": ""
                   },
                   "preValues": []
                 },

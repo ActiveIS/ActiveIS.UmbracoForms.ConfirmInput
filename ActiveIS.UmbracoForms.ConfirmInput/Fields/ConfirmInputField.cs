@@ -32,6 +32,9 @@ namespace ActiveIS.UmbracoForms.ConfirmInput.Fields
         [Setting("Validation error message", Description = "The message shown when validation fails", View = "~/App_Plugins/UmbracoForms/Backoffice/Common/SettingTypes/textfield.html")]
         public string ValidationErrorMessage { get; set; }
 
+        [Setting("Placeholder", Description = "Enter a HTML5 placeholder value", View = "TextField")]
+        public string Placeholder { get; set; }
+
         public override IEnumerable<string> ValidateField(Form form, Field field, IEnumerable<object> postedValues, HttpContextBase context,
             IFormStorage formStorage)
         {

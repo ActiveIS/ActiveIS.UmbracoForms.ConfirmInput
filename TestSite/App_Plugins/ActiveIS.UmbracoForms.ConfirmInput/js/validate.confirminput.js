@@ -36,7 +36,9 @@
         }
 
         input.removeClass("input-validation-error");
+        input.addClass("valid");
         confirmInput.removeClass("input-validation-error");
+        confirmInput.addClass("valid");
         return true;
     });
 jQuery.validator.unobtrusive.adapters.addBool("validateconfirminput");
