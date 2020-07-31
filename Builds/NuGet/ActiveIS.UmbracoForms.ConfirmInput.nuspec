@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>ActiveIS.UmbracoForms.ConfirmInput</id>
-    <version>0.0.2-beta</version>
+    <version>0.0.3-beta</version>
     <title>ActiveIS.UmbracoForms.ConfirmInput</title>
     <authors>ActiveIS</authors>
     <owners>ActiveIS</owners>
@@ -11,7 +11,7 @@
     <projectUrl>https://github.com/ActiveIS/ActiveIS.UmbracoForms.ConfirmInput</projectUrl>
     <icon>logo.png</icon>
     <description>A text input with confirmation field</description>
-    <releaseNotes>Initial Release</releaseNotes>
+    <releaseNotes>Added placeholder support</releaseNotes>
     <copyright>Copyright 2020</copyright>
     <tags>umbraco umbraco-cms umbraco-forms</tags>
 	<dependencies>
