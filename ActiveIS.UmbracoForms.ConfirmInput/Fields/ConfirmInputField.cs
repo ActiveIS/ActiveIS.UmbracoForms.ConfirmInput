@@ -61,5 +61,25 @@ namespace ActiveIS.UmbracoForms.ConfirmInput.Fields
 
             return javascriptFiles;
         }
+
+        public override IEnumerable<object> ProcessSubmittedValue(Field field, IEnumerable<object> postedValues, HttpContextBase context)
+        {
+            var fieldValues = postedValues.ToList();
+            if (field != null)
+            {
+                var updatedField = field;
+                if (fieldValues.Any())
+                {
+                    if (fieldValues.Count() > 1)
+                    {
+                        fieldValues.RemoveAt(1);
+                    }
+
+                    updatedField.Values = fieldValues;
+                    return base.ProcessSubmittedValue(updatedField, fieldValues, context);
+                }
+            }
+            return base.ProcessSubmittedValue(field, fieldValues, context);
+        }
     }
 }
