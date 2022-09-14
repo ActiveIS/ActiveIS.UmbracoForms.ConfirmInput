@@ -7,7 +7,7 @@
         {
           "caption": null,
           "sortOrder": 0,
-          "id": "00000000-0000-0000-0000-000000000000",
+          "id": "c4953094-3a90-42df-a612-87a90b043b4b",
           "page": "00000000-0000-0000-0000-000000000000",
           "containers": [
             {
@@ -32,9 +32,15 @@
                   "condition": null,
                   "settings": {
                     "DefaultValue": "",
-                    "Placeholder": ""
+                    "Placeholder": "",
+                    "ShowLabel": "",
+                    "MaximumLength": "",
+                    "FieldType": "",
+                    "AutocompleteAttribute": ""
                   },
-                  "preValues": []
+                  "preValues": [],
+                  "allowedUploadTypes": null,
+                  "allowMultipleFileUploads": true
                 },
                 {
                   "caption": "Email",
@@ -48,11 +54,11 @@
                   "dataSourceFieldKey": null,
                   "containsSensitiveData": false,
                   "mandatory": false,
-                  "regex": "[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+",
+                  "regex": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$",
                   "requiredErrorMessage": null,
                   "invalidErrorMessage": null,
                   "condition": {
-                    "id": "00000000-0000-0000-0000-000000000000",
+                    "id": "f4e2894d-b8ec-421d-9150-c50ed28e9492",
                     "enabled": false,
                     "actionType": "Show",
                     "logicType": "All",
@@ -62,7 +68,9 @@
                     "ValidationErrorMessage": "",
                     "Placeholder": ""
                   },
-                  "preValues": []
+                  "preValues": [],
+                  "allowedUploadTypes": null,
+                  "allowMultipleFileUploads": true
                 },
                 {
                   "caption": "Message",
@@ -82,9 +90,15 @@
                   "condition": null,
                   "settings": {
                     "DefaultValue": "",
-                    "Placeholder": ""
+                    "Placeholder": "",
+                    "ShowLabel": "",
+                    "AutocompleteAttribute": "",
+                    "NumberOfRows": "",
+                    "MaximumLength": ""
                   },
-                  "preValues": []
+                  "preValues": [],
+                  "allowedUploadTypes": null,
+                  "allowMultipleFileUploads": true
                 },
                 {
                   "caption": "Consent for storing submitted data",
@@ -105,7 +119,9 @@
                   "settings": {
                     "AcceptCopy": "Yes, I give permission to store and process my data"
                   },
-                  "preValues": null
+                  "preValues": null,
+                  "allowedUploadTypes": null,
+                  "allowMultipleFileUploads": true
                 }
               ]
             }
@@ -115,8 +131,9 @@
       ],
       "caption": "Contact Us",
       "sortOrder": 0,
-      "id": "00000000-0000-0000-0000-000000000000",
-      "form": "00000000-0000-0000-0000-000000000000"
+      "id": "a5213a29-6735-4461-a324-fd97f45a4de0",
+      "form": "00000000-0000-0000-0000-000000000000",
+      "buttonCondition": null
     }
   ],
   "id": "6d977d23-5654-4b37-b922-2b669096dbf6",
@@ -131,6 +148,7 @@
   "xPathOnSubmit": null,
   "manualApproval": false,
   "storeRecordsLocally": true,
+  "autocompleteAttribute": "",
   "cssClass": null,
   "disableDefaultStylesheet": false,
   "useClientDependency": false,
@@ -138,5 +156,6 @@
   "datasource": null,
   "submitLabel": "Submit",
   "nextLabel": "Next",
-  "prevLabel": "Prev"
+  "prevLabel": "Prev",
+  "folderId": null
 }
