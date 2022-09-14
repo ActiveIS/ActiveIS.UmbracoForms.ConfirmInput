@@ -51,7 +51,7 @@ namespace ActiveIS.UmbracoForms.ConfirmInput.Fields
                 errors.Add(ValidationErrorMessage);
             }
 
-            return errors.Any() ? errors : base.ValidateField(form, field, fieldValues, context, formStorage);
+            return errors.Any() ? errors : base.ValidateField(form, field, fieldValues.Take(1), context, formStorage);
         }
 
         public override IEnumerable<string> RequiredJavascriptFiles(Field field)

@@ -2,12 +2,33 @@
     'use strict';
     angular.module('umbraco.filters', []);
     'use strict';
+    function _toConsumableArray(arr) {
+        return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
+    }
+    function _nonIterableSpread() {
+        throw new TypeError('Invalid attempt to spread non-iterable instance');
+    }
+    function _iterableToArray(iter) {
+        if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === '[object Arguments]')
+            return Array.from(iter);
+    }
+    function _arrayWithoutHoles(arr) {
+        if (Array.isArray(arr)) {
+            for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+                arr2[i] = arr[i];
+            }
+            return arr2;
+        }
+    }
     angular.module('umbraco.filters').filter('compareArrays', function () {
         return function inArray(array, compareArray, compareProperty) {
+            if (!compareArray || !compareArray.length) {
+                return _toConsumableArray(array);
+            }
             var result = [];
-            angular.forEach(array, function (arrayItem) {
+            array.forEach(function (arrayItem) {
                 var exists = false;
-                angular.forEach(compareArray, function (compareItem) {
+                compareArray.forEach(function (compareItem) {
                     if (arrayItem[compareProperty] === compareItem[compareProperty]) {
                         exists = true;
                     }
@@ -169,7 +190,7 @@
     'use strict';
     /**
  * @ngdoc filter
- * @name umbraco.filters.filter:CMS_joinArray
+ * @name umbraco.filters.filter:umbCmsJoinArray
  * @namespace umbCmsJoinArray
  * 
  * param {array} array of string or objects, if an object use the third argument to specify which prop to list.
@@ -182,9 +203,28 @@
  */
     angular.module('umbraco.filters').filter('umbCmsJoinArray', function () {
         return function join(array, separator, prop) {
-            return (!angular.isUndefined(prop) ? array.map(function (item) {
+            return (!Utilities.isUndefined(prop) ? array.map(function (item) {
                 return item[prop];
             }) : array).join(separator || '');
+        };
+    });
+    'use strict';
+    /**
+ * @ngdoc filter
+ * @name umbraco.filters.filter:umbCmsTitleCase
+ * @namespace umbCmsTitleCase
+ * 
+ * param {string} the text turned into title case.
+ * 
+ * @description
+ * Transforms text to title case. Capitalizes the first letter of each word, and transforms the rest of the word to lower case.
+ * 
+ */
+    angular.module('umbraco.filters').filter('umbCmsTitleCase', function () {
+        return function (str) {
+            return str.replace(/\w\S*/g, function (txt) {
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            });
         };
     });
     'use strict';
@@ -200,10 +240,10 @@
         'use strict';
         function umbWordLimitFilter() {
             return function (collection, property) {
-                if (!angular.isString(collection)) {
+                if (!Utilities.isString(collection)) {
                     return collection;
                 }
-                if (angular.isUndefined(property)) {
+                if (Utilities.isUndefined(property)) {
                     return collection;
                 }
                 var newString = '';
