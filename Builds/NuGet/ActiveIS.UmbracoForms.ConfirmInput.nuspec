@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>ActiveIS.UmbracoForms.ConfirmInput</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>ActiveIS.UmbracoForms.ConfirmInput</title>
     <authors>ActiveIS</authors>
     <owners>ActiveIS</owners>
@@ -11,14 +11,14 @@
     <projectUrl>https://github.com/ActiveIS/ActiveIS.UmbracoForms.ConfirmInput</projectUrl>
     <icon>logo.png</icon>
     <description>A text input with confirmation field</description>
-    <releaseNotes>Removed duplicate entry into field</releaseNotes>
-    <copyright>Copyright 2020</copyright>
+    <releaseNotes>Fixed validation issue</releaseNotes>
+    <copyright>Copyright 2022</copyright>
     <tags>umbraco umbraco-cms umbraco-forms</tags>
 	<dependencies>
 	  <group targetFramework=".NETFramework4.7.2">
-		  <dependency id="UmbracoForms" version="8.4.1" />
-		  <dependency id="UmbracoForms.Core" version="8.4.1" />
-		  <dependency id="UmbracoCms" version="8.6.1" />
+		  <dependency id="UmbracoForms" version="8.10.2" />
+		  <dependency id="UmbracoForms.Core" version="8.10.2" />
+		  <dependency id="UmbracoCms" version="8.17.2" />
 	  </group>
     </dependencies>
   </metadata>
