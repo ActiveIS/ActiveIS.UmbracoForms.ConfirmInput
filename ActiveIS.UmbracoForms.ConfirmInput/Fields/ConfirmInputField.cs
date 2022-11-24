@@ -7,6 +7,7 @@ using Umbraco.Forms.Core.Attributes;
 using Umbraco.Forms.Core.Data.Storage;
 using Umbraco.Forms.Core.Enums;
 using Umbraco.Forms.Core.Models;
+using Umbraco.Forms.Core.Services;
 
 namespace ActiveIS.UmbracoForms.ConfirmInput.Fields
 {
@@ -36,9 +37,8 @@ namespace ActiveIS.UmbracoForms.ConfirmInput.Fields
         public string Placeholder { get; set; }
 
         public override IEnumerable<string> ValidateField(Form form, Field field, IEnumerable<object> postedValues, HttpContextBase context,
-            IFormStorage formStorage)
+            IFormStorage formStorage, IFieldTypeStorage fieldTypeStorage, List<string> errors)
         {
-            var errors = new List<string>();
             var fieldValues = postedValues.ToList();
 
             if (!fieldValues[0].ToString().Equals(fieldValues[1].ToString(), StringComparison.InvariantCultureIgnoreCase))
@@ -51,7 +51,7 @@ namespace ActiveIS.UmbracoForms.ConfirmInput.Fields
                 errors.Add(ValidationErrorMessage);
             }
 
-            return errors.Any() ? errors : base.ValidateField(form, field, fieldValues.Take(1), context, formStorage);
+            return base.ValidateField(form, field, postedValues.Take(1), context, formStorage, fieldTypeStorage, errors);
         }
 
         public override IEnumerable<string> RequiredJavascriptFiles(Field field)
